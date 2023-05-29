@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Antonio:100,200,300,regular,500,600,700);
+
+
+div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+div.container>div {
+    width: 30%;
+    min-width: 255px;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    margin: 10px;
+    position: relative;
+    font-family: 'Antonio';
+    border-radius: 10px;
+    transition: .5s;
+}
+
+div.container>div:hover {
+    box-shadow: 5px 5px 10px 1px rgba(0, 255, 255, 0.578);
+}
+
+div.container div.text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 71%;
+    margin: 0px;
+    height: auto;
+    background-color: rgba(127, 255, 212, 0.342);
+    transition: 1s;
+    border-radius: 10px;
+}
+
+div.container div.text :is(h3, p) {
+    margin: 5px 0px;
+}
+
+div.container div.text:hover {
+    background-color: aqua;
+}
+
+div.buttons {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+div.buttons button {
+    margin: 20px;
+    width: 150px;
+    height: 40px;
+    font-family: 'Antonio';
+    background-color: rgba(0, 255, 255, 0.532);
+    border-radius: 10px;
+    border: 2px solid aquamarine;
+    transition: 1s;
+    cursor: pointer;
+}
+
+div.buttons button:hover {
+    background-color: rgb(0, 255, 255);
+    box-shadow: 3px 3px 10px 1px rgba(0, 255, 255, 0.269);
+}
+
+.vivo {
+    border: 3px dotted lightgreen;
+}
+
+.muerto {
+    border: 3px dotted lightcoral;
+}

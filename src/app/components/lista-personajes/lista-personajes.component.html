@@ -1,0 +1,21 @@
+<div class="buttons">
+    <button *ngIf="pagina !== 1" (click)="onClick(false)">Retroceder👈</button>
+    <button *ngIf="pagina <= numPaginas" (click)="onClick(true)">Avanzar👉</button>
+</div>
+<div class="container">
+    <div [ngClass]="{
+        'vivo': personaje.status === 'Alive',
+        'muerto': personaje.status === 'Dead'
+    }" *ngFor="let personaje of this.arrayPersonajes" [ngStyle]="{'backgroundImage': 'url('+personaje.image+')'}">
+        <div class="text">
+            <h2>{{personaje.name}}</h2>
+            <h3>Status: {{personaje.status}}</h3>
+            <p>Gender: {{personaje.gender}}</p>
+            <p>Specie: {{personaje.species}}</p>
+        </div>
+    </div>
+</div>
+<div class="buttons">
+    <button *ngIf="pagina !== 1" (click)="onClick(false)">Retroceder</button>
+    <button *ngIf="pagina <= numPaginas" (click)="onClick(true)">Avanzar</button>
+</div>
